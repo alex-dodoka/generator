@@ -1,12 +1,13 @@
-function sequence() {
-    let callNumber = 0;
+function sequence(start, step) {
+    step = step || 0;
+    start = start;
     return function () {
-        return ++callNumber;
+        return step+start;
     }
 }
 
-let generator = sequence();
+let generator = sequence(10, 3);
 
-console.log(generator()); // 1
-console.log(generator()); // 2
-console.log(generator()); // 3
+console.log(generator());
+console.log(generator());
+console.log(generator());
