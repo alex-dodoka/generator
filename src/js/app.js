@@ -1,8 +1,12 @@
 function sequence(start, step) {
     step = step || 0;
-    start = start;
+
     return function () {
-        return step+start;
+        if (step === 0) {
+            return start;
+        } else {
+            return start + step;
+        }
     }
 }
 
