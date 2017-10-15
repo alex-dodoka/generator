@@ -20,3 +20,23 @@ function take(fn, count) {
 }
 
 console.log(take(gen2, 5));
+
+/*----Next step-----*/
+
+let arr = [1, 2, 3];
+
+function square(x) {
+    return x * x;
+}
+
+function map(fn, array) {
+    const arrOfResults = [];
+
+    array.forEach((item) => {
+        arrOfResults.push(fn(item))
+    });
+    return arrOfResults;
+}
+
+console.log(map(square, arr)); // [1, 4, 9]
+console.log(arr); // [1, 2, 3]
